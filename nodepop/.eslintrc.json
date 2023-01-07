@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": "google",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "node": true,
+        "esnext": true,
+        "globals": {},
+        "globalstrict": true,
+        "quotmark": "single",
+        "undef": true,
+        "unused": true
+    }
+}
