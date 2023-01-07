@@ -1,6 +1,5 @@
-//const { Schema, Model, Connection} =  require('mongoose')
-
 const mongoose =  require('mongoose')
+const mongoosePaginate = require('mongoose-paginate-v2')
 
 
 const adverstisementSchema = mongoose.Schema({
@@ -15,13 +14,12 @@ const adverstisementSchema = mongoose.Schema({
     }
 });
 
+adverstisementSchema.plugin(mongoosePaginate)
+
 const Advertisement = mongoose.model('Advertisement', adverstisementSchema)
+
+
 
 module.exports = Advertisement
 
-
-/* 
-
-
-; */
 
