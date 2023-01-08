@@ -3,10 +3,10 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 
 
 const adverstisementSchema = mongoose.Schema({
-    nombre: String,
-    venta: Boolean,
-    precio: Number,
-    foto: String,
+    name: String,
+    sellOrBuy: Boolean,
+    price: Number,
+    image: String,
     tags: [String],
     createAt: {
         type: Date, 
