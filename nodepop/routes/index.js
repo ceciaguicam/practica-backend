@@ -14,8 +14,6 @@ let limit = 5
 
 router.get('/api/v1/advertisements/', function(req, res, next) {
 
-  //let tags = req.query.tags
-
   if(req.query.page) {
     page = req.query.page
   }
@@ -24,9 +22,6 @@ router.get('/api/v1/advertisements/', function(req, res, next) {
     limit = req.query.limit
   }
 
-  
-  //let name = req.query.name
-  //let sellOrBuy = req.query.sellOrBuy
   let priceBottom = parseFloat(req.query.priceBottom)
   let priceTop = parseFloat(req.query.priceTop)
   
@@ -54,8 +49,10 @@ router.get('/api/v1/advertisements/', function(req, res, next) {
   })
 
   console.log(filterValues)
-
-  filterValues.name = new RegExp('^' + req.query.name, 'i')
+  if(req.query.name){
+    filterValues.name = new RegExp('^' + req.query.name, 'i')
+  }
+  
 
   console.log(filterValues)
 

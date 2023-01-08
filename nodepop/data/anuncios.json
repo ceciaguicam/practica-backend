@@ -4,7 +4,7 @@
             "name": "bicicleta",
             "sellOrBuy": true,
             "price": 230.15,
-            "image": "bici.jpg",
+            "image": "./bici.jpg",
             "tags": [ "lifestyle", "motor"]
         },
         {
